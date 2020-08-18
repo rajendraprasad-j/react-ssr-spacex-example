@@ -19,7 +19,7 @@ const SpaceXList = ({ launch }) => {
                 {r.mission_id.map(missionId => <li>{missionId}</li>)}
               </div>
               <div class="cart__details">
-                <div class="cart__details--item"> <span>Launch Year</span><span>{r.launch_year}r</span></div>
+                <div class="cart__details--item"> <span>Launch Year</span><span>{r.launch_year}</span></div>
                 <div class="cart__details--item"> <span>Successfull launch</span><span>{typeof r.launch_success === 'undefined' ? '-' : r.launch_success+''}</span></div>
                 <div class="cart__details--item"> <span>Successful landing</span><span>{typeof r.land_success === 'undefined' ? '-' : r.land_success+''}</span></div>
               </div>
