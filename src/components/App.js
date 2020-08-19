@@ -5,9 +5,9 @@ import Main from './Main'
 const App = () => (
   <div className="app">
     <Head />
-    <header class="header"> SpaceX Launch Programs </header>
+    <header className="header"> SpaceX Launch Programs </header>
     <Main />
-    <footer class="footer">Developed By : J RajendraPrasad</footer>
+    <footer className="footer">Developed By : J RajendraPrasad</footer>
   </div>
 );
 

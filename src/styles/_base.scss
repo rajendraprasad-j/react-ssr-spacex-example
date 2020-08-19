@@ -21,6 +21,8 @@ body {
 .app{
   display: grid;
   grid-gap: 20px;
+  max-width: 1440px;
+  margin: auto;
   grid-template-areas: "header" "sidebar" "list" "footer";
   .header{
     font-size: 2.5rem;
@@ -159,7 +161,7 @@ body {
     .launch-programs{
         .cards{
             .cart__item{
-                width: 48%;
+                width: 47%;
             }
           
         }

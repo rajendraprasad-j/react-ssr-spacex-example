@@ -27,8 +27,8 @@ const Main = () => {
 
   return (
       <>
-          <aside class="filters"> <Filters query={query} onClickFilter={onClickFilter} /></aside>
-          <main class="launch-programs"> <SpaceXList launch={launch}  /></main>
+          <aside className="filters"> <Filters query={query} onClickFilter={onClickFilter} /></aside>
+          <main className="launch-programs"> <SpaceXList launch={launch}  /></main>
       </>
     );
   
