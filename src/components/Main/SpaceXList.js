@@ -10,13 +10,13 @@ const SpaceXList = ({ launch }) => {
         <div class="cart__item">
           <div class="cart__contents">
             <div class="cart__img">
-              <img src={r.links.mission_patch_small}></img>
+              <img loading="lazy" src={r.links.mission_patch_small} alt={`${r.mission_name} img`}></img>
             </div>
             <div class="cart__bottom">
               <div class="cart__heading"> {r.mission_name}</div>
               <div class="cart__mission-list">
                 <div class="cart__mission-list--heading"> Mission Ids</div>
-                {r.mission_id.map(missionId => <li>{missionId}</li>)}
+                <ul>{r.mission_id.map(missionId => <li key={missionId}>{missionId}</li>)}</ul>
               </div>
               <div class="cart__details">
                 <div class="cart__details--item"> <span>Launch Year</span><span>{r.launch_year}</span></div>
