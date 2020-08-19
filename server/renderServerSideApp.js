@@ -31,7 +31,7 @@ function renderApp(ServerApp, data, req, res) {
   const context = {};
   const modules = [];
 
-  const markup = ReactDOMServer.renderToNodeStream(
+  const markup = ReactDOMServer.renderToString(
     <Loadable.Capture report={moduleName => modules.push(moduleName)}>
       <ServerApp location={req.url} data={data} context={context} />
     </Loadable.Capture>
