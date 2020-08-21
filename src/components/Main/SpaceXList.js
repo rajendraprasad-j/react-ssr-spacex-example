@@ -1,11 +1,13 @@
 import React from 'react';
 
+import { getProp } from '../../utils/helpers'
 
-
-const SpaceXList = ({ launch }) => {
+const SpaceXList = ({ launch, loading }) => {
 
   return (
     <div className="cards">
+      
+      {loading ? <span>Loading...</span>: <span></span> }
       {launch.map(r =>
         <div key={r.mission_name} className="cart__item">
           <div className="cart__contents">
@@ -20,8 +22,8 @@ const SpaceXList = ({ launch }) => {
               </div>
               <div className="cart__details">
                 <div className="cart__details--item"> <span>Launch Year</span><span>{r.launch_year}</span></div>
-                <div className="cart__details--item"> <span>Successfull launch</span><span>{typeof r.launch_success === 'undefined' ? '-' : r.launch_success+''}</span></div>
-                <div className="cart__details--item"> <span>Successful landing</span><span>{typeof r.land_success === 'undefined' ? '-' : r.land_success+''}</span></div>
+                <div className="cart__details--item"> <span>Successfull launch</span><span>{ getProp(r, 'launch_success', '')+""}</span></div>
+                <div className="cart__details--item"> <span>Successful landing</span><span>{ getProp(r, 'rocket.first_stage.cores.0.land_success', '-' )+''}</span></div>
               </div>
             </div>
           </div>
